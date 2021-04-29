@@ -128,10 +128,99 @@ The text will be displayed exactly as written in the HTML source code.</pre>
     <input type="text">
     <input type="reset" value="reset"><br>
     <input type="search" value="OO" placeholder="PPPO" > <button>Search</button><br>
+    <input id="telNo" name="telNo" type="tel" required><br>
+    <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required><br>
+    <input type="week" name="week" id="camp-week" min="2018-W18" max="2018-W26" required>
+  </form>
+  <hr>
+  <textarea name="dltpdndtextarea" id="dltpdndtextarea" cols="30" rows="10"></textarea><hr>
+  <label for="dltpdndselect">select</label>
+  <select name="dltpdndselect" id="dltpdndselect">
+   <optgroup label="CC">
+    <option value="CC1">CC1</option>
+    <option value="CC2">CC2</option>
+    <option value="CC3">CC3</option>
+  </optgroup>
+  <optgroup label="pp">
+    <option value="PP1">PP1</option>
+    <option value="PP3">PP2</option>
+    <option value="PP3">PP3</option>
+  </optgroup>
+  </select> <hr>
+  <form action="">
+    <fieldset>  tag is used to group related elements in a form.
+      <legend>tag defines a caption for the </legend>
+      <label for="fname">First name:</label>
+      <input type="text" name="fname"><br><br>
+    </fieldset>
+  </form>
+  <hr>
+  <form action="/action_page.php" method="get">
+    <label for="browser">Choose your browser from the list:</label>
+    <input list="browsers" name="browser" id="browser">
+    <datalist id="browsers">
+      <option value="CC1">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+    <input type="submit">
   </form>
   <hr>
 
-
+  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" id="a" value="50">
+    +<input type="number" id="b" value="25">
+    =<output name="x" for="a b"></output>
+    </form>
+    This event is similar to the onchange event. The difference is that the oninput event occurs immediately after the value of an element has changed,<br>
+    while onchange occurs when the element loses focus, after the content has been changed.
+  <hr>
   
+  <iframe src="https://www.youtube.com/" width="100%" height="300" style="border:1px solid black;">
+  </iframe>
+  <hr>
+
+  <img src="rip aprat.png" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href=""><br>
+  tag is used to define an image map. An image map is an image with clickable areas.
+</map>
+<hr>
+<canvas id="myCanvas">Your browser does not support the canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0, 0, 80, 100);
+</script>
+<hr>
+
+<figure>
+  <img src="rip aprat.png" alt="Trulli" style="width:40%;height:40%;">
+  <figcaption>element to define a caption for the photo:</figcaption>
+</figure>
+<hr>
+
+<picture style="width: 50px; height: 50px;">
+  element will be for art direction in responsive designs. <br>
+  <source media="(min-width:650px)" srcset="capricious.png">
+  <source media="(min-width:465px)" srcset="miscellaneous.png">
+  <img src="smolder.png" alt="Flowers" style="width:auto;">
+</picture>
+<hr>
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg> <br>  
+<h3>SVG needs more time</h3>
+<hr>
+
+
 </body>
 </html>
